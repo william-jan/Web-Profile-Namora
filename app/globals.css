@@ -1853,6 +1853,62 @@ img {
   line-height: 1.7;
 }
 
+.availabilityCopy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.availabilityDate {
+  margin-bottom: 22px;
+  color: #ffffff;
+  font-size: clamp(1.85rem, 3.4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.availabilityBlock {
+  max-width: 560px;
+}
+
+.availabilityBlock + .availabilityBlock {
+  margin-top: 22px;
+}
+
+.availabilityBlock p,
+.availabilityBlock li {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.98rem;
+}
+
+.availabilityBlock p {
+  margin-bottom: 6px;
+}
+
+.availabilityBlock ul {
+  margin: 12px 0 0;
+  padding-left: 26px;
+}
+
+.availabilityStatus {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.availabilityStatus span {
+  flex: 0 0 auto;
+  color: #ffffff;
+}
+
+.availabilityBlock a {
+  color: #ffffff;
+  font-weight: 900;
+  text-underline-offset: 4px;
+}
+
 .contactPanel {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

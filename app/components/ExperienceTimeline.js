@@ -32,7 +32,7 @@ export default function ExperienceTimeline({ items }) {
                   ))}
                 </ul>
               ) : null}
-              <span className="expandHint">{isOpen ? "Ringkas detail" : "Lihat detail"}</span>
+              <span className="expandHint">{isOpen ? "Less detail" : "See detail"}</span>
             </button>
           </article>
         );
