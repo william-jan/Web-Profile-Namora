@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const profileImage = "/assets/profile-picture.png";
+const profileImage = "/assets/profile-picture.jpg";
 
 export default function ProfilePhotoModal() {
   const [isOpen, setIsOpen] = useState(false);

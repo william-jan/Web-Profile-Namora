@@ -300,10 +300,31 @@ export default function Home() {
       </section>
 
       <section className="section contactSection" id="contact">
-        <div className="locationCopy">
-          <p className="eyebrow">Contact</p>
-          <h2>Open to analytical and data product work.</h2>
-          <small>Available for analytics, machine learning, dashboarding, and data pipeline opportunities.</small>
+        <div className="locationCopy availabilityCopy">
+          <p className="eyebrow">Current Availability</p>
+          <p className="availabilityDate">As of 11 May 2026</p>
+          <div className="availabilityBlock">
+            <p className="availabilityStatus">
+              <span aria-hidden="true">&times;</span>
+              Not actively available for full-time opportunities.
+            </p>
+            <p>
+              Currently engaged in a full-time role - see current position{" "}
+              <a href="#experience">above</a>.
+            </p>
+          </div>
+          <div className="availabilityBlock">
+            <p className="availabilityStatus">
+              <span aria-hidden="true">&#9651;</span>
+              Open to international research and data product collaborations
+            </p>
+            <p>(remote or on-site), especially in:</p>
+            <ul>
+              <li>Data &amp; AI research</li>
+              <li>Analytics engineering</li>
+              <li>ML/data products</li>
+            </ul>
+          </div>
         </div>
         <div className="contactPanel">
           <a href="mailto:namorafn7@gmail.com">Email</a>
