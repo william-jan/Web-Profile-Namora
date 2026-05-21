@@ -26,6 +26,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: hidden;
   background:
     linear-gradient(90deg, rgba(17, 18, 20, 0.045) 1px, transparent 1px),
     linear-gradient(180deg, rgba(17, 18, 20, 0.04) 1px, transparent 1px),
@@ -59,6 +60,7 @@ p {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .scrollProgress {
@@ -547,7 +549,7 @@ img {
 
 .aboutHero {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: clamp(40px, 6vw, 86px);
   align-items: center;
 }
@@ -2094,4 +2096,614 @@ img {
     border-width: 6px;
   }
 
+}
+
+@media (max-width: 760px) {
+  body {
+    background-size: 34px 34px, 34px 34px, auto;
+  }
+
+  p,
+  li {
+    line-height: 1.62;
+  }
+
+  .siteHeader {
+    max-height: 116px;
+    padding: 10px 12px 9px;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .brand {
+    justify-content: space-between;
+  }
+
+  .brand span {
+    font-size: 0.88rem;
+  }
+
+  .brand small {
+    font-size: 0.74rem;
+  }
+
+  .siteHeader nav {
+    width: 100%;
+    gap: 14px;
+    padding-bottom: 3px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+  }
+
+  .siteHeader nav a {
+    flex: 0 0 auto;
+    min-height: 28px;
+    font-size: 0.78rem;
+    scroll-snap-align: start;
+  }
+
+  .section {
+    width: min(100% - 20px, 1160px);
+    padding: 52px 0;
+  }
+
+  .hero {
+    min-height: calc(100svh - 86px);
+    padding: 54px 0 66px;
+  }
+
+  .heroIdentity {
+    width: min(100% - 24px, 620px);
+  }
+
+  .heroTitle {
+    margin-bottom: 18px;
+    font-size: clamp(2.45rem, 14vw, 3.35rem);
+    line-height: 0.96;
+  }
+
+  .heroPortraitFrame {
+    width: clamp(124px, 42vw, 158px);
+    margin-bottom: 20px;
+    border-radius: 26px;
+  }
+
+  .heroPortrait,
+  .heroPortraitFrame::after {
+    border-radius: 20px;
+  }
+
+  .heroRole {
+    max-width: 300px;
+    margin-bottom: 20px;
+    font-size: 0.98rem;
+  }
+
+  .heroIntro {
+    max-width: 330px;
+    margin-top: 18px;
+    font-size: 0.98rem;
+  }
+
+  .button,
+  .project-hero .buttons a {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .introBand,
+  .projectSection,
+  .educationSection,
+  .experienceSection,
+  .certificationsSection {
+    width: min(100% - 20px, 1280px);
+    margin: 18px auto;
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .aboutHero {
+    gap: 28px;
+  }
+
+  .introBand h2,
+  .sectionHead h2,
+  .locationCopy h2 {
+    font-size: clamp(1.85rem, 10vw, 2.45rem);
+    line-height: 1.04;
+  }
+
+  .aboutCopy {
+    max-width: none;
+  }
+
+  .aboutSkillChips {
+    gap: 8px;
+  }
+
+  .aboutSkillChips span {
+    min-height: 38px;
+    padding: 0 11px;
+    font-size: 0.8rem;
+  }
+
+  .aboutVisualPlate {
+    display: none;
+  }
+
+  .dataSystemPanel {
+    min-height: auto;
+    gap: 18px;
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .dataSystemHeader {
+    display: grid;
+    gap: 10px;
+  }
+
+  .dataSystemHeader strong {
+    max-width: none;
+    font-size: 1.72rem;
+    text-align: left;
+  }
+
+  .pipelineFlow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pipelineFlow::before {
+    display: none;
+  }
+
+  .pipelineFlow div {
+    min-height: 112px;
+    padding: 14px 10px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.38);
+  }
+
+  .systemMetrics {
+    grid-template-columns: 1fr;
+  }
+
+  .systemMetrics div {
+    min-height: 82px;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .miniChart {
+    height: 78px;
+    gap: 7px;
+    padding: 12px;
+  }
+
+  .aboutFacts,
+  .featuredGrid,
+  .projectList,
+  .educationGrid,
+  .certGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutFacts article {
+    min-height: 118px;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .sectionHead {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+  }
+
+  .sectionHead > span {
+    justify-self: start;
+  }
+
+  .projectCarousel {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .skillExperience {
+    grid-template-columns: 1fr;
+  }
+
+  .skillTabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .skillTabs button {
+    min-height: 76px;
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .skillFeature {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .featureNumber {
+    font-size: 3.15rem;
+  }
+
+  .featureIntro h3 {
+    font-size: clamp(1.9rem, 11vw, 2.65rem);
+    line-height: 0.98;
+  }
+
+  .workflowSteps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workflowStep {
+    min-height: 96px;
+  }
+
+  .workflowStep small {
+    margin-bottom: 18px;
+  }
+
+  .marqueeTrack {
+    animation-duration: 28s;
+  }
+
+  .carouselTopline {
+    grid-template-columns: 1fr auto;
+  }
+
+  .carouselControls button {
+    width: 38px;
+    height: 38px;
+    font-size: 1.35rem;
+  }
+
+  .carouselTrack {
+    --carousel-edge: 0px;
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    padding: 18px 0;
+  }
+
+  .carouselSlide {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .carouselDots {
+    flex-wrap: wrap;
+  }
+
+  .projectCard,
+  .infoCard,
+  .certCard {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .featuredProject {
+    min-height: auto;
+  }
+
+  .projectCard {
+    gap: 14px;
+  }
+
+  .projectCard h3,
+  .infoCard h3,
+  .certCard strong,
+  .featuredProject h3 {
+    font-size: 1.2rem;
+    line-height: 1.16;
+  }
+
+  .featuredProject .desc {
+    -webkit-line-clamp: unset;
+  }
+
+  .projectLinks {
+    flex-wrap: wrap;
+    justify-content: stretch;
+  }
+
+  .projectLinks a,
+  .projectLinks button {
+    flex: 1 1 132px;
+    min-height: 38px;
+  }
+
+  .educationGrid .infoCard {
+    grid-template-rows: auto;
+  }
+
+  .educationGrid .infoCard h3 {
+    min-height: 0;
+    align-items: start;
+  }
+
+  .timelineItem {
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .timeline::before {
+    left: 11px;
+  }
+
+  .timelineDot {
+    width: 24px;
+    height: 24px;
+    border-width: 6px;
+  }
+
+  .timelineContent {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .timelineHeader {
+    display: grid;
+    gap: 7px;
+  }
+
+  .timelineContent h3 {
+    font-size: 1.12rem;
+    line-height: 1.24;
+  }
+
+  .certCard {
+    min-height: 142px;
+  }
+
+  .contactSection {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-bottom: 70px;
+  }
+
+  .locationCopy,
+  .contactPanel {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .contactPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .contactPanel a {
+    min-height: 58px;
+  }
+
+  .photoModal {
+    padding: 12px;
+  }
+
+  .photoModalPanel {
+    width: min(420px, calc(100vw - 24px));
+    border-radius: 24px;
+  }
+
+  .photoModalImage {
+    max-height: calc(100dvh - 36px);
+    border-radius: 18px;
+  }
+
+  .projectModal {
+    align-items: end;
+    padding: 10px;
+  }
+
+  .projectModalPanel {
+    width: 100%;
+    max-height: calc(100dvh - 20px);
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .projectModalHero {
+    padding: 0 42px 14px 0;
+  }
+
+  .projectModalHero h3 {
+    font-size: 1.55rem;
+  }
+
+  .projectModalActions a,
+  .projectModalActions button {
+    flex: 1 1 140px;
+  }
+
+  .projectEmbedOverlay {
+    padding: 8px;
+  }
+
+  .projectEmbedPanel {
+    width: calc(100vw - 16px);
+    height: calc(100dvh - 16px);
+    border-radius: 18px;
+  }
+
+  .projectEmbedHeader {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 10px;
+  }
+
+  .projectEmbedHeader strong {
+    min-width: 0;
+    overflow: hidden;
+    font-size: 0.86rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .projectEmbedHeader a {
+    display: none;
+  }
+
+  .certificateModal {
+    align-items: end;
+    padding: 8px;
+  }
+
+  .certificateModalPanel {
+    width: calc(100vw - 16px);
+    height: min(760px, calc(100dvh - 16px));
+    border-radius: 18px;
+  }
+
+  .certificateModalHeader {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .certificateModalHeader h3 {
+    font-size: 1.42rem;
+    line-height: 1.08;
+  }
+
+  .certificatePreview {
+    padding: 12px;
+  }
+
+  .certificatePreview iframe {
+    min-height: 0;
+    height: 100%;
+    border-radius: 12px;
+  }
+
+  .certificateModalActions {
+    padding: 0 12px 12px;
+  }
+
+  .certificateModalActions a {
+    width: 100%;
+  }
+
+  .certificateCredentialList {
+    padding: 12px;
+  }
+
+  .certificateCredentialCard {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .certificateCredentialCard a {
+    width: 100%;
+  }
+
+  .project-hero {
+    width: min(100% - 20px, 1160px);
+    margin-top: 18px;
+    padding: 46px 20px;
+    border-radius: 22px;
+  }
+
+  .project-hero h1 {
+    font-size: clamp(2.2rem, 13vw, 3.2rem);
+    line-height: 0.98;
+  }
+
+  .project-hero .buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .project-logo {
+    width: 124px;
+  }
+
+  .project-content {
+    width: min(100% - 20px, 1000px);
+    padding: 28px 0 70px;
+  }
+
+  .project-section {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .project-section h2 {
+    font-size: 1.55rem;
+  }
+
+  .project-image {
+    margin: 18px auto;
+    border-radius: 12px;
+  }
+
+  .tableau-container {
+    margin: 18px -10px;
+    padding: 0 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tableau-container iframe {
+    min-width: 760px;
+    min-height: 620px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 430px) {
+  .introBand,
+  .projectSection,
+  .educationSection,
+  .experienceSection,
+  .certificationsSection,
+  .locationCopy,
+  .contactPanel,
+  .skillFeature,
+  .project-section {
+    padding: 18px;
+  }
+
+  .skillTabs {
+    grid-template-columns: 1fr;
+  }
+
+  .pipelineFlow,
+  .workflowSteps {
+    grid-template-columns: 1fr;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.3rem, 16vw, 3rem);
+  }
+
+  .heroRole,
+  .heroIntro {
+    max-width: 290px;
+  }
+
+  .projectCard,
+  .infoCard,
+  .certCard,
+  .timelineContent {
+    padding: 16px;
+  }
+
+  .certificateModalHeader {
+    grid-template-columns: 1fr auto;
+  }
 }
